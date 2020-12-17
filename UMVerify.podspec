@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'UMVerify'
-  spec.version       = '2.1.0'
+  spec.version       = '2.2.0'
   spec.license       = { :type => 'Copyright', :text => <<-LICENSE
                             Copyright 2011 - 2018 umeng.com. All rights reserved.\n
                             LICENSE
