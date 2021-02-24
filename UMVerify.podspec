@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'UMVerify'
-  spec.version       = '2.2.0'
+  spec.version       = '3.2.1'
   spec.license       = { :type => 'Copyright', :text => <<-LICENSE
                             Copyright 2011 - 2018 umeng.com. All rights reserved.\n
                             LICENSE
@@ -17,11 +17,11 @@ Pod::Spec.new do |spec|
 
   spec.requires_arc = true
 
-  spec.vendored_frameworks = 'UMVerify.framework'
+  spec.vendored_frameworks = 'UMVerify.framework', 'YTXMonitor.framework', 'YTXOperators.framework'
   spec.resource = 'ATAuthSDK.bundle'
 
   spec.frameworks = 'CoreTelephony', 'SystemConfiguration'
   spec.libraries  = 'sqlite3', 'z'
 
-  spec.dependency 'UMCCommon'
+  spec.dependency 'UMCommon'
 end

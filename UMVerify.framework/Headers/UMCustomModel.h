@@ -96,6 +96,9 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
 /** 授权页弹出方向，默认UMPNSPresentationDirectionBottom */
 @property (nonatomic, assign) UMPNSPresentationDirection presentDirection;
 
+/** 授权页显示和消失动画时间，默认为0.25s，<= 0 时关闭动画 **/
+@property (nonatomic, assign) CGFloat animationDuration;
+
 #pragma mark- 状态栏
 /** 状态栏是否隐藏，默认NO */
 @property (nonatomic, assign) BOOL prefersStatusBarHidden;
@@ -154,6 +157,8 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
 #pragma mark- 协议
 /** checkBox图片组，[uncheckedImg,checkedImg]*/
 @property (nonatomic, copy) NSArray<UIImage *> *checkBoxImages;
+/** checkBox图片距离控件边框的填充，默认为 UIEdgeInsetsZero，确保控件大小减去内填充大小为资源图片大小情况下，图片才不会变形 **/
+@property (nonatomic, assign) UIEdgeInsets checkBoxImageEdgeInsets;
 /** checkBox是否勾选，默认NO */
 @property (nonatomic, assign) BOOL checkBoxIsChecked;
 /** checkBox是否隐藏，默认NO */
